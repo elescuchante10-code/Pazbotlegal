@@ -100,9 +100,15 @@ def feedback():
     ok = captura.registrar_feedback(consulta_id, fb, nota)
     return jsonify({"ok": ok})
 
+CAPTURA_TOKEN = os.environ.get("CAPTURA_TOKEN", "")
+
 @app.route("/captura", methods=["GET"])
 def panel_captura():
-    """Panel de captura: resumen + consultas recientes."""
+    """Panel de captura (uso interno): resumen + consultas recientes.
+    Contiene conversaciones reales de usuarios; requiere token de administrador."""
+    token = request.args.get("token") or request.headers.get("X-Captura-Token")
+    if not CAPTURA_TOKEN or token != CAPTURA_TOKEN:
+        return jsonify({"error": "No autorizado"}), 403
     return jsonify({
         "resumen": captura.resumen(),
         "recientes": captura.listar_recientes(30),

@@ -186,16 +186,6 @@
         Alejandra cita las fuentes consultadas al final de cada respuesta.
       </p>
     </div>
-    <div>
-      <h3>Memoria de entrenamiento</h3>
-      <div class="info-card">
-        <div class="row"><span>Total consultas</span><b id="cap-total">0</b></div>
-        <div class="row"><span>👍 Útiles</span><b id="cap-pos" style="color:var(--green)">0</b></div>
-        <div class="row"><span>👎 No útiles</span><b id="cap-neg" style="color:var(--red)">0</b></div>
-        <div class="row"><span>Sin revisar</span><b id="cap-rev">0</b></div>
-      </div>
-      <div id="cap-lista" class="cap-lista"></div>
-    </div>
   </aside>
 </main>
 <script>
@@ -204,7 +194,6 @@ let premium = false;
 let sessionId = null;
 const userId = "cliente_" + Math.random().toString(36).slice(2, 8);
 document.getElementById("info-user").textContent = userId;
-cargarCaptura();
 
 function setPerfil(p) {
   perfil = p;
@@ -266,27 +255,7 @@ async function enviarFeedback(cid, tipo, posBtn, negBtn, saved) {
     });
     saved.classList.add("show");
     setTimeout(() => saved.classList.remove("show"), 1800);
-    cargarCaptura();
   } catch (e) { console.error(e); }
-}
-
-async function cargarCaptura() {
-  try {
-    const r = await fetch("/captura");
-    const d = await r.json();
-    const s = d.resumen || {};
-    document.getElementById("cap-total").textContent = s.total_consultas || 0;
-    document.getElementById("cap-pos").textContent = s.feedback_positivo || 0;
-    document.getElementById("cap-neg").textContent = s.feedback_negativo || 0;
-    document.getElementById("cap-rev").textContent = s.sin_revisar || 0;
-    const lista = document.getElementById("cap-lista");
-    if (lista && d.recientes) {
-      lista.innerHTML = d.recientes.slice(0,8).map(r =>
-        `<div class="cap-item"><span class="cap-q">${(r.query||"").replace(/</g,"&lt;")}</span>` +
-        `<span class="cap-meta">${r.perfil} · ${r.semaforo||""} · ${r.feedback||"—"}</span></div>`
-      ).join("");
-    }
-  } catch (e) {}
 }
 
 async function send() {
@@ -348,7 +317,6 @@ async function send() {
       document.getElementById("info-tokens").textContent = data.tokens || "—";
       document.getElementById("info-tiempo").textContent = (data.tiempo || "—") + "s";
       document.getElementById("info-cache").textContent = data.desde_cache ? "Sí" : "No";
-      cargarCaptura();
     }
   } catch (e) {
     typing.remove();
