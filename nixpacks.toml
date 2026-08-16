@@ -1,16 +1,17 @@
-# Optimizacion de build para Railway (torch + sentence-transformers)
+# Configuracion de build para Railway
 [phases.setup]
-nixPkgs = ["python3", "gcc"]
+nixPkgs = ["python3", "gcc", "stdenv.cc.cc.lib"]
 
 [phases.install]
-# torch CPU-only via indice extra para evitar descargar CUDA
+# Instalar torch CPU-only primero (evita descargar CUDA ~2.5GB),
+# luego el resto de dependencias. nixpacks crea el venv en /opt/venv.
 cmds = [
-  "pip install --upgrade pip",
-  "python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
-  "pip install -r requirements.txt"
+  "/opt/venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+  "/opt/venv/bin/python -m pip install -r requirements.txt"
 ]
 
 [variables]
 CUDA_VISIBLE_DEVICES = "-1"
 TOKENIZERS_PARALLELISM = "false"
 HF_HUB_DISABLE_PROGRESS_BARS = "1"
+NIXPACKS_PYTHON_VERSION = "3.13"
