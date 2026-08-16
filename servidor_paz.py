@@ -5,6 +5,11 @@ Uso: python servidor_paz.py  (luego abre http://localhost:5000)
 import os, sys, uuid, pathlib
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+# Persistir modelos de HuggingFace en el volumen de datos (Railway) si DATA_DIR esta definido
+_DATA_DIR = os.environ.get("DATA_DIR")
+if _DATA_DIR:
+    os.environ["HF_HOME"] = str(pathlib.Path(_DATA_DIR) / "hf_cache")
+    os.environ["TRANSFORMERS_CACHE"] = str(pathlib.Path(_DATA_DIR) / "hf_cache")
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 from flask import Flask, request, jsonify, send_from_directory
@@ -108,4 +113,5 @@ def health():
     return jsonify({"status": "ok", "memoria": agente.memoria is not None})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

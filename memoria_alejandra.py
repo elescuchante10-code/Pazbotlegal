@@ -13,7 +13,10 @@ Cada cliente tiene su propio user_id (memoria aislada = multi-tenant).
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-import json, pathlib
+import json, pathlib, os
+
+# Ruta base de datos: usa DATA_DIR (volumen persistente en Railway) si esta definido.
+_DATA_DIR = pathlib.Path(os.environ.get("DATA_DIR", "."))
 
 # Configuracion de mem0: DeepSeek como LLM, HuggingFace local como embedder (privacidad)
 def _config_mem0():
@@ -36,7 +39,7 @@ def _config_mem0():
         "vector_store": {
             "provider": "qdrant",
             "config": {
-                "path": str(pathlib.Path("rag_laboral/13_versiones_publicadas/memoria_qdrant").resolve()),
+                "path": str((_DATA_DIR / "rag_laboral" / "13_versiones_publicadas" / "memoria_qdrant").resolve()),
                 "embedding_model_dims": 384,
             },
         },

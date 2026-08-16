@@ -19,9 +19,12 @@ Estructura del registro:
 
 El log vive en rag_laboral/14_captura_pruebas/consultas_log.jsonl
 """
-import json, uuid, pathlib, datetime
+import json, uuid, pathlib, datetime, os
 
-DIR_CAPTURA = pathlib.Path("rag_laboral/14_captura_pruebas")
+# Ruta base de datos: usa DATA_DIR (volumen persistente en Railway) si esta definido,
+# si no, usa el directorio del repo (local).
+_DATA_DIR = pathlib.Path(os.environ.get("DATA_DIR", "."))
+DIR_CAPTURA = _DATA_DIR / "rag_laboral" / "14_captura_pruebas"
 DIR_CAPTURA.mkdir(parents=True, exist_ok=True)
 LOG = DIR_CAPTURA / "consultas_log.jsonl"
 INDICE = DIR_CAPTURA / "resumen_pruebas.json"

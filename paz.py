@@ -24,7 +24,9 @@ DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 TEMPERATURA = 0.2
 
 # --- Cache de consultas (ahorro de costos) ---
-DIR_CACHE = pathlib.Path("rag_laboral/13_versiones_publicadas/cache_paz")
+# Usa DATA_DIR (volumen persistente en Railway) si esta definido.
+_DATA_DIR = pathlib.Path(os.environ.get("DATA_DIR", "."))
+DIR_CACHE = _DATA_DIR / "rag_laboral" / "13_versiones_publicadas" / "cache_paz"
 DIR_CACHE.mkdir(parents=True, exist_ok=True)
 
 def hash_prompt(system_prompt, user_prompt, modelo):
