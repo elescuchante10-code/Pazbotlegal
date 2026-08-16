@@ -1,0 +1,1 @@
+Imagen/diagrama en pagina 84. Dimensiones 95x93px. Contexto cercano: figura de jornales, el  periodo de pago no podrá ser superior a una semana.  Se puede pactar un periodo de pago mensual, por ejemplo, pero que el pago  se haga el primer día hábil del mes siguiente, o. Descripcion generada por layout detection (requiere vision model para detalle).

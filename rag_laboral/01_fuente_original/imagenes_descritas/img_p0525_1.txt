@@ -1,0 +1,1 @@
+Imagen/diagrama en pagina 525. Dimensiones 95x93px. Contexto cercano: figura  que aplica a los turnos de trabajadores, contemplada en el artículo 165 del  Código Sustantivo del Trabajo.  Allí, lo que se turna no es la jornada del trabajador, sino el grupo de  trabajador. Descripcion generada por layout detection (requiere vision model para detalle).

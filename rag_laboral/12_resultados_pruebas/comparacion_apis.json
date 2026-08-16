@@ -1,0 +1,209 @@
+[
+  {
+    "perfil": "trabajador",
+    "query": "¿Cuando hay contrato realidad y que puede hacer el trabajador para reclamar sus prestaciones?",
+    "citas": [
+      {
+        "tema": "Consecuencias de la declaración del contrato de trabajo realidad",
+        "paginas": [
+          52,
+          53
+        ],
+        "topic_id": "LAB-0032"
+      },
+      {
+        "tema": "Herederos con derecho a reclamar salarios y prestaciones de trabajador fallecido",
+        "paginas": [
+          1132
+        ],
+        "topic_id": "LAB-1234"
+      },
+      {
+        "tema": "Pago de salarios y prestaciones sociales cuando fallece el trabajador",
+        "paginas": [
+          1132
+        ],
+        "topic_id": "LAB-1233"
+      },
+      {
+        "tema": "Entrega del cargo luego de terminado el contrato de trabajo",
+        "paginas": [
+          1093
+        ],
+        "topic_id": "LAB-1193"
+      },
+      {
+        "tema": "De la obligación de entrega del puesto de trabajo",
+        "paginas": [
+          1093
+        ],
+        "topic_id": "LAB-1192"
+      }
+    ],
+    "deepseek": {
+      "texto": "**Razonamiento breve:**\n\nTu consulta tiene dos partes: (1) cuándo se configura el contrato realidad y (2) qué puede hacer el trabajador para reclamar sus prestaciones. El contexto recuperado de la Guía Laboral 2026 aborda directamente ambos puntos en la sección sobre \"Consecuencias de la declaración del contrato de trabajo realidad\" (páginas 52-53). Sin embargo, debo advertir que el contexto no incluye información sobre el procedimiento específico de reclamación (demanda, reclamación administrativa ante el Ministerio de Trabajo, etc.), por lo que en ese punto tendré que indicarte que no tengo información suficiente.\n\n---\n\n**Respuesta directa:**\n\n**1. ¿Cuándo hay contrato realidad?**\n\n- Según la sección \"Consecuencias de la declaración del contrato de trabajo realidad\" de la Guía Laboral 2026 (páginas 52-53), el trabajador que invoca la existencia de un contrato de trabajo debe demostrar la **prestación personal del servicio**.\n- Al demostrar ese elemento, se activa la **presunción del artículo 24 del CST** a favor del trabajador: se presume que existe un contrato de trabajo.\n- Los elementos que dan vida a esa presunción son: **(a)** la prestación personal del servicio y **(b)** las fechas de inicio y/o terminación de la relación contractual.\n- Importante: esa presunción **admite prueba en contrario**. El empleador puede desvirtuarla demostrando, por ejemplo, que el trabajador actuaba con autonomía (no subordinación). En ese caso, será el juez quien decida conforme a las pruebas aportadas por ambas partes.\n\n**2. ¿Qué puede hacer el trabajador para reclamar sus prestaciones?**\n\n- Según la misma sección (páginas 52-53), la vía es **demandar ante el juez laboral** la declaración del contrato realidad. La guía señala que, por regla general, el trabajador demanda cuando el contrato civil o comercial se termina, es decir, cuando ha sido desvinculado de la empresa.\n- Al declararse el contrato realidad, el trabajador tiene derecho a reclamar:\n  - **Prestaciones sociales** (cesantías, primas, vacaciones, etc.) calculadas sobre el valor que se pagaba como honorarios, que para la ley se convierte en salario.\n  - **Aportes a seguridad social** (salud, pensión y riesgos laborales) que el empleador debió hacer durante toda la relación.\n  - **Indemnización por despido injustificado**, si aplica.\n  - **Indemnización moratoria** por el no pago de salarios y prestaciones, y por el no pago de cesantías.\n- **Caso especial de los aportes a pensión:** según la guía (páginas 52-53), las cotizaciones a pensión **no prescriben**, porque su finalidad es construir un derecho vitalicio (la pensión). Por lo tanto, el empleador debe hacer el pago retroactivo de esos aportes por **todo el tiempo** que duró el contrato realidad.\n\n---\n\n**Citas exactas:**\n\n- \"Al que invoca la existencia del contrato de trabajo le corresponde demostrar la prestación personal del servicio, así se favorece de la presunción del artículo 24 del CST.\" — Sección \"Consecuencias de la declaración del contrato de trabajo realidad\", Guía Laboral 2026, páginas 52-53.\n- \"La prestación personal del servicio junto con las fechas en las cuales se inició y/o terminó la relación contractual, son los elementos que dan vida a la presunción en favor del trabajador.\" — Misma sección, páginas 52-53.\n- \"Al declararse la existencia del contrato de trabajo realidad... se le adeudan al trabajador todos los conceptos derivados de ese contrato como son prestaciones sociales y eventualmente las indemnizaciones correspondientes.\" — Misma sección, páginas 52-53.\n- \"Las cotizaciones o aportes a pensión no prescriben por cuanto su finalidad es construir un derecho que es vitalicio y que no prescribe como es la pensión.\" — Misma sección, páginas 52-53.\n\n---\n\n**Advertencias:**\n\n1. **Información faltante:** El contexto no incluye el procedimiento detallado de reclamación (por ejemplo, si se requiere reclamación administrativa previa ante el Ministerio de Trabajo, los términos para demandar, o el contenido de la demanda). **No tengo información suficiente sobre este punto.** Te sugiero consultar la sección sobre \"Procedimiento laboral\" o \"Reclamación administrativa\" en la Guía Laboral 2026, o asesorarte con un abogado laboralista.\n\n2. **Prescripción:** La guía menciona que los pagos se calculan \"siempre que no hayan prescrito\" (páginas 52-53), pero no detalla los términos de prescripción para cada concepto (salarios, cesantías, primas, etc.). Este es un dato decisivo que debes verificar.\n\n3. **Fuente secundaria:** La Guía Laboral 2026 de Gerencie.com es una fuente explicativa que **no reemplaza** el Código Sustantivo del Trabajo, las",
+      "tiempo": 9.602769613265991,
+      "tokens": 1200
+    },
+    "openrouter": {
+      "texto": "ERROR: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+      "tiempo": 0.3536183834075928,
+      "tokens": 0
+    }
+  },
+  {
+    "perfil": "empresa",
+    "query": "¿Como puedo despedir un trabajador sin tener que pagar indemnizacion?",
+    "citas": [
+      {
+        "tema": "Indemnización por despedir al trabajador discapacitado sin autorización del inspector de trabajo",
+        "paginas": [
+          430
+        ],
+        "topic_id": "LAB-0478"
+      },
+      {
+        "tema": "Requisitos para despedir al trabajador sin justa causa",
+        "paginas": [
+          362
+        ],
+        "topic_id": "LAB-0409"
+      },
+      {
+        "tema": "Qué hacer si el empleador no paga lo adeudado al trabajador",
+        "paginas": [
+          1117
+        ],
+        "topic_id": "LAB-1217"
+      },
+      {
+        "tema": "Qué hacer cuando el trabajador no acepta el desmejoramiento",
+        "paginas": [
+          1155,
+          1156
+        ],
+        "topic_id": "LAB-1254"
+      },
+      {
+        "tema": "¿Si no despido al trabajador cuando se pensione, puedo despedirlo después?",
+        "paginas": [
+          151
+        ],
+        "topic_id": "LAB-0155"
+      }
+    ],
+    "deepseek": {
+      "texto": "# Razonamiento breve\n\nAnalicemos su consulta: usted quiere despedir a un trabajador **sin pagar indemnización**. Según el contexto recuperado, esto solo es posible si existe una **justa causa comprobada** o una **causal objetiva legal** (como el reconocimiento de la pensión). La guía es clara en que el despido sin justa causa **siempre genera indemnización**, salvo casos muy específicos.\n\n---\n\n# Respuesta directa\n\n## 1. La regla general: despido sin justa causa = indemnización obligatoria\n\nSegún la sección **\"Requisitos para despedir al trabajador sin justa causa\"** de la Guía Laboral 2026 (página 362):\n\n- El empleador **puede** despedir al trabajador en cualquier momento, incluso sin razón.\n- Pero si no existe justa causa, **debe pagar la indemnización** establecida en el artículo 64 del Código Sustantivo del Trabajo.\n- La guía cita textualmente: *\"lo único que debe hacer el empleador es pagar la indemnización establecida por la ley y el vínculo laboral queda roto\"*.\n\n**Conclusión:** No existe una vía legal para despedir sin justa causa y sin pagar indemnización. Si usted despide sin justa causa, la ley le obliga a indemnizar.\n\n---\n\n## 2. Las únicas vías para despedir sin pagar indemnización\n\nSegún el contexto, estas son las situaciones donde **no se paga indemnización**:\n\n### a) Despido con justa causa comprobada\n- Si el trabajador incurre en una falta grave contemplada en la ley, usted puede despedirlo sin indemnización.\n- **Pero debe probar la justa causa** y respetar el debido proceso y el derecho a la defensa del trabajador (sección \"Indemnización por despedir al trabajador discapacitado\", página 430).\n- Si el trabajador demanda, el juez presumirá que el despido fue injusto, y **usted deberá probar** que existió una causa objetiva y legal.\n\n### b) Despido por reconocimiento de pensión\nSegún la sección **\"¿Si no despido al trabajador cuando se pensione, puedo despedirlo después?\"** (página 151):\n\n- El reconocimiento de la pensión es una **justa causa legal** para despedir.\n- Esta causal **no desaparece con el tiempo**: puede despedir al trabajador pensionado incluso meses o años después.\n- No se exige inmediatez, a diferencia de las faltas imputables al trabajador.\n- La Corte Suprema de Justicia (sentencia 78842 de 2019) respalda esta posición.\n\n---\n\n## 3. Lo que NO puede hacer\n\nSegún el contexto, estas vías **no le permiten evitar la indemnización**:\n\n| Situación | Consecuencia |\n|-----------|-------------|\n| **Falta de actividades para asignar** al trabajador | No es justa causa. Debe pagar salario o indemnización (página 1117) |\n| **Desmejorar condiciones** y que el trabajador renuncie | Se configura **despido indirecto**. Deberá pagar indemnización (páginas 1155-1156) |\n| **Despedir a un trabajador con estabilidad laboral reforzada** | Riesgo de reintegro + pago de salarios dejados de devengar (página 1156) |\n\n---\n\n# Advertencias importantes\n\n1. **Verificación normativa:** La Guía Laboral 2026 es una fuente secundaria explicativa. Le recomiendo contrastar con el Código Sustantivo del Trabajo (artículo 64), la Ley 50 de 1990 y la jurisprudencia vigente.\n\n2. **Datos faltantes:** Para asesorarle mejor, necesitaría saber:\n   - ¿Cuál es la razón por la que quiere despedir al trabajador?\n   - ¿El trabajador tiene alguna condición especial (discapacidad, fuero sindical, embarazo, etc.)?\n   - ¿Cuánto tiempo lleva el trabajador en la empresa?\n\n3. **Riesgo legal:** Si despide sin justa causa y sin pagar indemnización, el trabajador puede demandar y usted enfrentará:\n   - Pago de la indemnización completa\n   - Posibles intereses moratorios\n   - En casos de estabilidad laboral reforzada: **orden de reintegro** con pago de todos los salarios dejados de devengar\n\n4. **Recomendación práctica:** Si no tiene una justa causa sólida y comprobable, la opción más segura jurídicamente es **despedir con el pago de la indemnización**, evaluando qué le resulta más económico que mantener la relación laboral (página 1117).",
+      "tiempo": 10.517951250076294,
+      "tokens": 1091
+    },
+    "openrouter": {
+      "texto": "ERROR: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+      "tiempo": 0.289745569229126,
+      "tokens": 0
+    }
+  },
+  {
+    "perfil": "trabajador",
+    "query": "¿Tengo derecho a prima de servicios si llevo solo 6 meses trabajando?",
+    "citas": [
+      {
+        "tema": "Valor de la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0766"
+      },
+      {
+        "tema": "Pagos que se incluyen en la base para liquidar la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0768"
+      },
+      {
+        "tema": "Salario base para el cálculo de la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0767"
+      },
+      {
+        "tema": "Cálculo de la prima de servicios",
+        "paginas": [
+          683
+        ],
+        "topic_id": "LAB-0771"
+      },
+      {
+        "tema": "Auxilio de transporte en el servicio doméstico",
+        "paginas": [
+          112
+        ],
+        "topic_id": "LAB-0108"
+      }
+    ],
+    "deepseek": {
+      "texto": "**Razonamiento breve:**  \nTu consulta se relaciona directamente con la prima de servicios, una prestación social que se paga proporcionalmente al tiempo trabajado. Según el contexto recuperado, la prima se calcula con base en el salario y los días laborados, sin importar si el tiempo trabajado es menor a un año. Esto aplica a tu caso, ya que llevas 6 meses.\n\n---\n\n**Respuesta directa:**  \nSí, tienes derecho a la prima de servicios proporcional a los 6 meses trabajados. Aquí los detalles:\n\n- **Derecho proporcional:** La prima de servicios equivale a un mes de salario por cada año trabajado, o proporcional si el tiempo es menor a un año. Si llevas 6 meses, te corresponde la mitad de un salario mensual.  \n  *Ejemplo:* Si ganas $2.000.000 mensuales, por 6 meses te corresponden $1.000.000.\n\n- **Base de cálculo:** Se toma el promedio de lo devengado en el semestre (o el tiempo trabajado si es menor a 6 meses). Se incluyen pagos como horas extras, recargos nocturnos, festivos, dominicales y comisiones, además del salario básico.\n\n- **Fórmula de cálculo:**  \n  `Salario base x días trabajados / 360`  \n  *Ejemplo:* Si tu salario promedio es $3.270.000 y trabajaste 150 días, el cálculo sería:  \n  `$3.270.000 x 150 / 360 = $1.362.500` (aproximadamente).\n\n- **Pago obligatorio:** La prima se paga incluso si llevas menos de 6 meses. No importa el tiempo laborado; siempre se paga la proporción correspondiente.\n\n---\n\n**Citas exactas:**  \n- Según la sección \"Valor de la prima de servicios\" de la Guía Laboral 2026 (página 681): *\"Por concepto de prima de servicios se debe pagar un mes de salario por cada año trabajado o proporcional si el tiempo trabajado es menor a un año.\"*  \n- Según la sección \"Cálculo de la prima de servicios\" de la Guía Laboral 2026 (página 683): *\"La prima de servicios se debe pagar aun en los casos en que para la fecha de realizar el pago el trabajador lleve trabajando menos de seis meses.\"*  \n- Según la sección \"Salario base para el cálculo de la prima de servicios\" de la Guía Laboral 2026 (página 681): *\"Para el cálculo de la prima de servicios se tiene en cuenta el promedio devengado en el semestre correspondiente, o el tiempo que llevare trabajando si es menor a los seis meses.\"*\n\n---\n\n**Advertencias:**  \n- **Verificación normativa:** Esta guía es una fuente secundaria. Te recomiendo contrastar esta información con el Código Sustantivo del Trabajo (CST) y la jurisprudencia vigente, especialmente la Ley 1788 de 2016 (para trabajadores del servicio doméstico) y la sentencia C-825 de 2006.  \n- **Datos faltantes:** Para calcular tu prima exacta, necesito conocer tu salario promedio mensual y los días exactos trabajados. Si tienes esos datos, puedo ayudarte a hacer el cálculo.  \n- **Riesgo:** Si tu empleador no paga la prima, puedes reclamarla ante el Ministerio de Trabajo o mediante una demanda laboral. No dejes pasar los plazos legales para reclamar.",
+      "tiempo": 6.888446092605591,
+      "tokens": 803
+    },
+    "openrouter": {
+      "texto": "ERROR: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+      "tiempo": 0.28529930114746094,
+      "tokens": 0
+    }
+  },
+  {
+    "perfil": "empresa",
+    "query": "¿Que descuentos puedo hacer legalmente al salario del trabajador?",
+    "citas": [
+      {
+        "tema": "La prohibición de hacer descuentos por daño y pérdida de herramientas",
+        "paginas": [
+          651
+        ],
+        "topic_id": "LAB-0725"
+      },
+      {
+        "tema": "Descuentos de salario por herramientas y errores del trabajador",
+        "paginas": [
+          651
+        ],
+        "topic_id": "LAB-0724"
+      },
+      {
+        "tema": "Descuentos por libranza en licencias no remuneradas",
+        "paginas": [
+          663
+        ],
+        "topic_id": "LAB-0742"
+      },
+      {
+        "tema": "Descuentos por libranzas en la licencia de maternidad",
+        "paginas": [
+          663
+        ],
+        "topic_id": "LAB-0741"
+      },
+      {
+        "tema": "Descuentos por libranza de la liquidación del trabajador",
+        "paginas": [
+          663,
+          664
+        ],
+        "topic_id": "LAB-0743"
+      }
+    ],
+    "deepseek": {
+      "texto": "**Razonamiento breve:**\n\nLa consulta se enmarca en el tema de los descuentos salariales permitidos al empleador. Según el contexto recuperado, la Guía Laboral 2026 aborda específicamente dos grandes bloques: (1) la prohibición de descontar por daños, pérdidas o errores del trabajador, y (2) los descuentos por libranzas en diferentes escenarios (licencias, liquidación). No hay información en el contexto sobre otros tipos de descuentos (como cuotas sindicales, embargos judiciales, etc.), por lo que me limitaré a lo que efectivamente cubre la guía.\n\n---\n\n**Respuesta directa:**\n\n**1. Descuentos PROHIBIDOS (lo que NO puede hacer como empresa):**\n\n- **No puede descontar por daño, pérdida de herramientas, errores o pérdidas causadas por el trabajador.** El artículo 59 del Código Sustantivo del Trabajo prohíbe descontar sumas al trabajador sin autorización expresa de este, y dentro de las excepciones legales NO está el descuento por daños o perjuicios causados por el trabajador. *(Sección: \"Descuentos de salario por herramientas y errores del trabajador\", página 651)*.\n\n- **No puede descontar libranzas sobre pagos que no constituyen salario**, como la licencia de maternidad (que es un auxilio económico de la EPS) o las incapacidades laborales. *(Sección: \"Descuentos por libranzas en la licencia de maternidad\", página 663)*.\n\n- **No puede descontar libranzas en licencias no remuneradas**, porque no hay salario que pagar y la empresa no está obligada a financiar el descuento. En ese caso, el trabajador debe pagar directamente al acreedor. *(Sección: \"Descuentos por libranza en licencias no remuneradas\", página 663)*.\n\n**2. Descuentos SÍ PERMITIDOS (lo que sí puede hacer):**\n\n- **Descuentos por libranza sobre el salario**, siempre que exista salario que pagar y medie autorización expresa del trabajador. *(Sección: \"Descuentos por libranza en licencias no remuneradas\", página 663)*.\n\n- **Descuentos por libranza sobre la liquidación del trabajador** cuando este se retira y aún debe parte del crédito. Puede descontar hasta el 100% de la liquidación (prestaciones sociales e indemnizaciones), **excepto el salario del último mes**, que está sujeto a la regla del 50%. Esto es posible porque el trabajador autoriza expresamente el descuento en el contrato de libranza. *(Sección: \"Descuentos por libranza de la liquidación del trabajador\", páginas 663-664)*.\n\n- **Cumplir órdenes de embargo judicial** hasta los límites legales. Si no puede tramitar un embargo por prelación de otros, debe comunicarlo al juzgado justificando la razón. *(Sección: \"La prohibición de hacer descuentos por daño y pérdida de herramientas\", página 651)*.\n\n---\n\n**Citas exactas:**\n\n- *\"El artículo 59 del código sustantivo del trabajo prohíbe descontar sumas al trabajador sin la autorización expresa de este, y señala una serie de excepciones entre las que no está el descuento por daños o perjuicios causados por el trabajador.\"* (Sección: \"Descuentos de salario por herramientas y errores del trabajador\", página 651).\n\n- *\"El pagador o empleador debe aplicar los descuentos por libranza sobre el salario que debe pagar al trabajador, y si no hay salario qué pagar, la empresa no puede hacer descuento alguno.\"* (Sección: \"Descuentos por libranza en licencias no remuneradas\", página 663).\n\n- *\"Si es el caso, el 100% de la liquidación puede ser descontada, excepto el salario del último mes que está sujeto a la regla del 50%, pero el resto de la liquidación, como prestaciones sociales e indemnizaciones, pueden ser descontadas por la empresa.\"* (Sección: \"Descuentos por libranza de la liquidación del trabajador\", páginas 663-664).\n\n---\n\n**Advertencias:**\n\n1. **Verificación normativa:** La Guía Laboral 2026 es una fuente secundaria explicativa. Le recomiendo contrastar esta información directamente con el Código Sustantivo del Trabajo (artículos 59, 113 y concordantes), la Ley 1527 de 2012 (libranzas) y la jurisprudencia vigente.\n\n2. **Datos faltantes:** El contexto no cubre otros descuentos legales como cuotas sindicales, embargos por alimentos, cooperativas, o descuentos autorizados expresamente por el trabajador (distintos de libranzas). Si necesita información sobre esos puntos, indíquelo para verificar si la guía los aborda.\n\n3. **Riesgo legal:** Realizar descuentos no autorizados por ley o sin autorización expresa del trabajador puede generar demandas laborales, sanciones y el pago de indemn",
+      "tiempo": 9.36077332496643,
+      "tokens": 1200
+    },
+    "openrouter": {
+      "texto": "ERROR: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+      "tiempo": 0.28559231758117676,
+      "tokens": 0
+    }
+  }
+]

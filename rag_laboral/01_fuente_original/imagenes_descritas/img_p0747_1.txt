@@ -1,0 +1,1 @@
+Imagen/diagrama en pagina 747. Dimensiones 95x93px. Contexto cercano: figura de comisiones, hará que  su sueldo sea variable mes a mes en vista de que la realización del supuesto  que da derecho a las comisiones puede ser diferente en cada mes, lo que  obligará a promed. Descripcion generada por layout detection (requiere vision model para detalle).

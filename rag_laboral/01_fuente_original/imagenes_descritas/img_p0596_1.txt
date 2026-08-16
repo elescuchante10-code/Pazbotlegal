@@ -1,0 +1,1 @@
+Imagen/diagrama en pagina 596. Dimensiones 95x93px. Contexto cercano: cuadro:  Concepto.  Valor.  Naturaleza.  Alimentación  $150.000.  Salarial  Alojamiento  $130.000  Salarial  Transporte  $300.000  No salarial  Gastos de representación.  $100.000  No salarial  Total,. Descripcion generada por layout detection (requiere vision model para detalle).

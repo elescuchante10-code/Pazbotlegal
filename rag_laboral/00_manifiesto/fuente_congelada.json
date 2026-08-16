@@ -1,0 +1,21 @@
+{
+  "source_id": "GUIA-LABORAL-GERENCIE-2026",
+  "nombre": "Guía Laboral 2026",
+  "editor": "Gerencie.com",
+  "paginas": 1169,
+  "tipo_fuente": "secundaria_explicativa",
+  "fecha_documento": "2026",
+  "fecha_ingreso": "2026-08-14",
+  "hash_sha256": "7c14d0e179d22f006788321afd0b23f8710884dad1a80c019b55c9df01436175",
+  "tamano_bytes": 7962439,
+  "version": 1,
+  "estado": "fuente_congelada",
+  "archivo_original": "1767265164_Guia-Laboral-Gerencie.com-2026.pdf",
+  "jurisdiccion": "Colombia",
+  "vigencia_referencial": "2026",
+  "notas": [
+    "Fuente secundaria explicativa. No reemplaza el Código Sustantivo del Trabajo, leyes ni jurisprudencia.",
+    "Inconsistencia editorial detectada: página 28 menciona Ley 2466 de 2025; página 1161 menciona Ley 1466 de 2025. Requiere verificación.",
+    "Contiene información temporal (salario mínimo, indicadores 2026) que requiere actualización anual."
+  ]
+}

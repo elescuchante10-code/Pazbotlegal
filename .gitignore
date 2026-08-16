@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Secretos / credenciales ---
+.env
+*.key
+credenciales.json
+# No subir claves de API
+DEEPSEEK_API_KEY
+OPENROUTER_API_KEY
+
+# --- Cache de PAZ (datos de ejecucion, regenerables) ---
+rag_laboral/13_versiones_publicadas/cache_paz/
+
+# --- Memoria mem0 (datos de ejecucion / privados) ---
+rag_laboral/12_memoria/
+*.mem0
+
+# --- Temporales / salidas de pruebas ---
+*.tmp
+*.log
+
+# --- IDE / SO ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Embeddings intermedios (regenerables con los scripts de pipeline) ---
+rag_laboral/11_paquete_indexacion/chunks_enriquecidos.jsonl
+rag_laboral/11_paquete_indexacion/chunks_por_problema_juridico.jsonl
+
+# --- Captura de pruebas: se versiona el modulo pero NO el log de ejecucion
+# (contiene conversaciones reales de clientes; se gestiona aparte)
+rag_laboral/14_captura_pruebas/consultas_log.jsonl
+rag_laboral/14_captura_pruebas/resumen_pruebas.json

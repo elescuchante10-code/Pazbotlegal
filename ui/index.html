@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAZ — Alejandra, abogada virtual</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --panel: #1a1d27;
+    --panel2: #232733;
+    --border: #2e3340;
+    --text: #e8eaf0;
+    --muted: #9aa0b0;
+    --accent: #6c8cff;
+    --accent2: #8b5cf6;
+    --green: #34d399;
+    --yellow: #fbbf24;
+    --red: #f87171;
+    --worker: #34d399;
+    --company: #6c8cff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column;
+  }
+  header {
+    background: linear-gradient(135deg, #1a1d27, #232733);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: white; font-size: 18px;
+  }
+  .brand h1 { font-size: 17px; font-weight: 600; }
+  .brand p { font-size: 12px; color: var(--muted); }
+  .controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .perfil-toggle { display: flex; background: var(--panel2); border-radius: 10px; padding: 3px; gap: 4px; border: 1px solid var(--border); }
+  .perfil-toggle button {
+    border: none; background: transparent; color: var(--muted); padding: 9px 18px;
+    border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 700; transition: all .2s;
+    min-width: 92px; letter-spacing: .02em;
+  }
+  .perfil-toggle button:hover { color: var(--text); }
+  .perfil-toggle button.active.worker {
+    background: var(--worker); color: #0b1f17; box-shadow: 0 0 0 2px rgba(52,211,153,.35);
+  }
+  .perfil-toggle button.active.company {
+    background: var(--accent); color: #0b1228; box-shadow: 0 0 0 2px rgba(108,140,255,.35);
+  }
+  .clear-btn {
+    background: var(--panel2); border: 1px solid var(--border); color: var(--muted);
+    padding: 9px 14px; border-radius: 10px; cursor: pointer; font-size: 12px; font-weight: 600;
+    transition: all .2s; display: flex; align-items: center; gap: 6px;
+  }
+  .clear-btn:hover { color: var(--red); border-color: var(--red); background: rgba(248,113,113,.1); }
+  .premium-chip {
+    display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted);
+    background: var(--panel2); padding: 7px 12px; border-radius: 10px; cursor: pointer; user-select: none;
+  }
+  .premium-chip.on { color: var(--yellow); background: rgba(251,191,36,.12); }
+  .premium-chip input { accent-color: var(--yellow); }
+  main { flex: 1; display: flex; overflow: hidden; }
+  .chat-area { flex: 1; display: flex; flex-direction: column; }
+  .messages { flex: 1; overflow-y: auto; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .msg { max-width: 78%; padding: 13px 17px; border-radius: 16px; line-height: 1.55; font-size: 14.5px; white-space: pre-wrap; word-wrap: break-word; }
+  .msg.user { align-self: flex-end; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; border-bottom-right-radius: 4px; }
+  .msg.alejandra { align-self: flex-start; background: var(--panel); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .msg .sources { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--muted); }
+  .msg .sources b { color: var(--text); }
+  .semaforo { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-left: 8px; }
+  .semaforo.verde { background: rgba(52,211,153,.18); color: var(--green); }
+  .semaforo.amarillo { background: rgba(251,191,36,.18); color: var(--yellow); }
+  .semaforo.rojo { background: rgba(248,113,113,.18); color: var(--red); }
+  .feedback-bar { display: flex; align-items: center; gap: 8px; margin-top: 10px;
+    padding-top: 10px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--muted); }
+  .fb-btn { background: var(--panel2); border: 1px solid var(--border); color: var(--muted);
+    width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; transition: all .15s; }
+  .fb-btn:hover { transform: scale(1.1); }
+  .fb-btn.pos.active { background: rgba(52,211,153,.2); color: var(--green); border-color: var(--green); }
+  .fb-btn.neg.active { background: rgba(248,113,113,.2); color: var(--red); border-color: var(--red); }
+  .fb-label { font-size: 11px; }
+  .fb-saved { color: var(--green); font-size: 11px; margin-left: 4px; opacity: 0; transition: opacity .3s; }
+  .fb-saved.show { opacity: 1; }
+  .typing { display: flex; gap: 5px; padding: 4px 0; }
+  .typing span { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); animation: bounce 1.2s infinite; }
+  .typing span:nth-child(2) { animation-delay: .2s; }
+  .typing span:nth-child(3) { animation-delay: .4s; }
+  @keyframes bounce { 0%,60%,100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-6px); opacity: 1; } }
+  .input-bar { padding: 16px 22px; border-top: 1px solid var(--border); background: var(--panel); display: flex; gap: 12px; align-items: flex-end; }
+  .input-bar textarea {
+    flex: 1; background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+    border-radius: 14px; padding: 13px 16px; font-size: 14.5px; resize: none; max-height: 140px; min-height: 46px;
+    font-family: inherit; outline: none; transition: border .2s;
+  }
+  .input-bar textarea:focus { border-color: var(--accent); }
+  .send-btn {
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; border: none;
+    width: 46px; height: 46px; border-radius: 50%; cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center; transition: transform .15s;
+  }
+  .send-btn:hover { transform: scale(1.08); }
+  .send-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+  .sidebar {
+    width: 280px; background: var(--panel); border-left: 1px solid var(--border);
+    padding: 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;
+  }
+  .sidebar h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 4px; }
+  .info-card { background: var(--panel2); border: 1px solid var(--border); border-radius: 12px; padding: 14px; font-size: 13px; }
+  .info-card .row { display: flex; justify-content: space-between; padding: 4px 0; color: var(--muted); }
+  .info-card .row b { color: var(--text); }
+  .hint { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .cap-lista { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .cap-item { background: var(--panel2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 7px 9px; font-size: 11px; }
+  .cap-q { display: block; color: var(--text); margin-bottom: 2px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; }
+  .cap-meta { color: var(--muted); font-size: 10px; }
+  @media (max-width: 760px) { .sidebar { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">P</div>
+    <div>
+      <h1>PAZ · Alejandra</h1>
+      <p>Abogada virtual de confianza — Derecho laboral colombiano</p>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="perfil-toggle">
+      <button id="btn-trabajador" class="active worker" onclick="setPerfil('trabajador')">Trabajador</button>
+      <button id="btn-empresa" onclick="setPerfil('empresa')">Empresa</button>
+    </div>
+    <label class="premium-chip" id="premium-chip" onclick="togglePremium()">
+      <input type="checkbox" id="premium-check" style="display:none">
+      <span id="premium-label">Memoria Premium: No</span>
+    </label>
+    <button class="clear-btn" onclick="clearChat()" title="Reiniciar conversación">↺ Limpiar chat</button>
+  </div>
+</header>
+<main>
+  <div class="chat-area">
+    <div class="messages" id="messages">
+      <div class="msg alejandra" id="welcome">
+        Hola, soy Alejandra, tu abogada virtual de confianza. ¿Qué vamos a hacer hoy? Cuéntame tu situación laboral y te oriento con claridad.
+      </div>
+    </div>
+    <div class="input-bar">
+      <textarea id="input" rows="1" placeholder="Escribe tu consulta laboral..." onkeydown="onKey(event)"></textarea>
+      <button class="send-btn" id="send" onclick="send()">➤</button>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <div>
+      <h3>Estado de la sesión</h3>
+      <div class="info-card">
+        <div class="row"><span>Perfil</span><b id="info-perfil">Trabajador</b></div>
+        <div class="row"><span>Memoria</span><b id="info-memoria">Básica</b></div>
+        <div class="row"><span>Cliente</span><b id="info-user">demo</b></div>
+        <div class="row"><span>Sesión</span><b id="info-sesion">—</b></div>
+      </div>
+    </div>
+    <div>
+      <h3>Última respuesta</h3>
+      <div class="info-card">
+        <div class="row"><span>Semáforo</span><b id="info-semaforo">—</b></div>
+        <div class="row"><span>Modelo</span><b id="info-modelo">—</b></div>
+        <div class="row"><span>Tokens</span><b id="info-tokens">—</b></div>
+        <div class="row"><span>Tiempo</span><b id="info-tiempo">—</b></div>
+        <div class="row"><span>Cache</span><b id="info-cache">—</b></div>
+      </div>
+    </div>
+    <div>
+      <h3>Ayuda</h3>
+      <p class="hint">
+        Selecciona <b>Trabajador</b> o <b>Empresa</b> para que Alejandra adapte la orientación.
+        Activa <b>Memoria Premium</b> para que recuerde tu caso entre sesiones.
+        Alejandra cita las fuentes consultadas al final de cada respuesta.
+      </p>
+    </div>
+    <div>
+      <h3>Memoria de entrenamiento</h3>
+      <div class="info-card">
+        <div class="row"><span>Total consultas</span><b id="cap-total">0</b></div>
+        <div class="row"><span>👍 Útiles</span><b id="cap-pos" style="color:var(--green)">0</b></div>
+        <div class="row"><span>👎 No útiles</span><b id="cap-neg" style="color:var(--red)">0</b></div>
+        <div class="row"><span>Sin revisar</span><b id="cap-rev">0</b></div>
+      </div>
+      <div id="cap-lista" class="cap-lista"></div>
+    </div>
+  </aside>
+</main>
+<script>
+let perfil = "trabajador";
+let premium = false;
+let sessionId = null;
+const userId = "cliente_" + Math.random().toString(36).slice(2, 8);
+document.getElementById("info-user").textContent = userId;
+cargarCaptura();
+
+function setPerfil(p) {
+  perfil = p;
+  document.getElementById("btn-trabajador").classList.toggle("active", p === "trabajador");
+  document.getElementById("btn-empresa").classList.toggle("active", p === "empresa");
+  document.getElementById("info-perfil").textContent = p === "trabajador" ? "Trabajador" : "Empresa";
+}
+function togglePremium() {
+  premium = !premium;
+  const chip = document.getElementById("premium-chip");
+  chip.classList.toggle("on", premium);
+  document.getElementById("premium-label").textContent = "Memoria Premium: " + (premium ? "Sí" : "No");
+  document.getElementById("info-memoria").textContent = premium ? "Premium" : "Básica";
+}
+
+function clearChat() {
+  if (!confirm("¿Reiniciar la conversación? Se borrarán los mensajes visibles (la memoria Premium del cliente se conserva en el servidor).")) return;
+  messages.innerHTML = "";
+  const welcome = document.createElement("div");
+  welcome.className = "msg alejandra";
+  welcome.textContent = "Conversación reiniciada. Hola, soy Alejandra, tu abogada virtual de confianza. ¿Qué vamos a hacer hoy?";
+  messages.appendChild(welcome);
+  sessionId = null;
+  document.getElementById("info-sesion").textContent = "—";
+  document.getElementById("info-semaforo").textContent = "—";
+  document.getElementById("info-modelo").textContent = "—";
+  document.getElementById("info-tokens").textContent = "—";
+  document.getElementById("info-tiempo").textContent = "—";
+  document.getElementById("info-cache").textContent = "—";
+  inputEl.focus();
+}
+
+const messages = document.getElementById("messages");
+const inputEl = document.getElementById("input");
+const sendBtn = document.getElementById("send");
+
+inputEl.addEventListener("input", () => {
+  inputEl.style.height = "auto";
+  inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
+});
+function onKey(e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }
+
+function addMsg(text, who, sourcesHtml) {
+  const div = document.createElement("div");
+  div.className = "msg " + who;
+  div.innerHTML = text + (sourcesHtml || "");
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+  return div;
+}
+
+async function enviarFeedback(cid, tipo, posBtn, negBtn, saved) {
+  posBtn.classList.remove("active"); negBtn.classList.remove("active");
+  (tipo === "positivo" ? posBtn : negBtn).classList.add("active");
+  try {
+    await fetch("/feedback", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ consulta_id: cid, feedback: tipo, nota: "" })
+    });
+    saved.classList.add("show");
+    setTimeout(() => saved.classList.remove("show"), 1800);
+    cargarCaptura();
+  } catch (e) { console.error(e); }
+}
+
+async function cargarCaptura() {
+  try {
+    const r = await fetch("/captura");
+    const d = await r.json();
+    const s = d.resumen || {};
+    document.getElementById("cap-total").textContent = s.total_consultas || 0;
+    document.getElementById("cap-pos").textContent = s.feedback_positivo || 0;
+    document.getElementById("cap-neg").textContent = s.feedback_negativo || 0;
+    document.getElementById("cap-rev").textContent = s.sin_revisar || 0;
+    const lista = document.getElementById("cap-lista");
+    if (lista && d.recientes) {
+      lista.innerHTML = d.recientes.slice(0,8).map(r =>
+        `<div class="cap-item"><span class="cap-q">${(r.query||"").replace(/</g,"&lt;")}</span>` +
+        `<span class="cap-meta">${r.perfil} · ${r.semaforo||""} · ${r.feedback||"—"}</span></div>`
+      ).join("");
+    }
+  } catch (e) {}
+}
+
+async function send() {
+  const query = inputEl.value.trim();
+  if (!query) return;
+  inputEl.value = ""; inputEl.style.height = "auto";
+  addMsg(query.replace(/</g,"&lt;"), "user");
+  sendBtn.disabled = true;
+  const typing = document.createElement("div");
+  typing.className = "msg alejandra"; typing.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+  messages.appendChild(typing); messages.scrollTop = messages.scrollHeight;
+  try {
+    const res = await fetch("/chat", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ query, perfil, user_id: userId, premium, session_id: sessionId })
+    });
+    const data = await res.json();
+    typing.remove();
+    if (data.error) { addMsg("⚠️ " + data.error, "alejandra"); }
+    else {
+      sessionId = data.session_id;
+      document.getElementById("info-sesion").textContent = sessionId.slice(-8);
+      const sf = data.semaforo || "AMARILLO";
+      const sfClass = sf.toLowerCase().includes("verde") ? "verde" : sf.toLowerCase().includes("rojo") ? "rojo" : "amarillo";
+      let sourcesHtml = "";
+      if (data.citas && data.citas.length) {
+        sourcesHtml = '<div class="sources"><b>Fuentes consultadas:</b><br>' +
+          data.citas.map(c => {
+            const doc = c.documento || "Guía laboral PAZ 2026";
+            const loc = c.locator || "";
+            if (doc.toLowerCase().includes("ley")) {
+              return `${c.marcador} ${doc} - ${loc.replace("Articulo: ","")}.`;
+            }
+            const pag = loc.replace("Paginas: ","");
+            return `${c.marcador} Guía laboral PAZ 2026 - Pag. ${pag}.`;
+          }).join("<br>") +
+          '<br><br>"Si quieres implementar la norma, pasate a premium y contacta a PAZ ORTEGA."</div>';
+      }
+      const div = addMsg(data.respuesta.replace(/</g,"&lt;").replace(/\n/g,"<br>") + sourcesHtml, "alejandra");
+      const sfSpan = document.createElement("span");
+      sfSpan.className = "semaforo " + sfClass; sfSpan.textContent = sf;
+      div.querySelector(".sources") ? div.querySelector(".sources").prepend(sfSpan) : div.append(sfSpan);
+      // --- Barra de feedback (memoria de entrenamiento) ---
+      if (data.consulta_id) {
+        const fb = document.createElement("div");
+        fb.className = "feedback-bar";
+        fb.innerHTML = '<span class="fb-label">¿Te fue útil esta respuesta?</span>' +
+          '<button class="fb-btn pos" title="Útil">👍</button>' +
+          '<button class="fb-btn neg" title="No útil">👎</button>' +
+          '<span class="fb-saved">Guardado</span>';
+        div.appendChild(fb);
+        const cid = data.consulta_id;
+        const posBtn = fb.querySelector(".pos"), negBtn = fb.querySelector(".neg"), saved = fb.querySelector(".fb-saved");
+        posBtn.onclick = () => enviarFeedback(cid, "positivo", posBtn, negBtn, saved);
+        negBtn.onclick = () => enviarFeedback(cid, "negativo", posBtn, negBtn, saved);
+      }
+      document.getElementById("info-semaforo").textContent = sf;
+      document.getElementById("info-modelo").textContent = data.modelo || "—";
+      document.getElementById("info-tokens").textContent = data.tokens || "—";
+      document.getElementById("info-tiempo").textContent = (data.tiempo || "—") + "s";
+      document.getElementById("info-cache").textContent = data.desde_cache ? "Sí" : "No";
+      cargarCaptura();
+    }
+  } catch (e) {
+    typing.remove();
+    addMsg("⚠️ Error de conexión: " + e, "alejandra");
+  }
+  sendBtn.disabled = false;
+}
+</script>
+</body>
+</html>

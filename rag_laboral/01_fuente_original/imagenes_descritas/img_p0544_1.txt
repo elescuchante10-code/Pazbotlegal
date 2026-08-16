@@ -1,0 +1,1 @@
+Imagen/diagrama en pagina 544. Dimensiones 95x93px. Contexto cercano: Cuadro resumen del descanso compensatorio.  Los descansos compensatorios los podemos resumir en la siguiente tabla:  Concepto.  Compensación.  Trabajar 1 o 2 domingos al mes.  Remuneración  o  descans. Descripcion generada por layout detection (requiere vision model para detalle).

@@ -1,0 +1,189 @@
+[
+  {
+    "perfil": "trabajador",
+    "query": "¿Cuando hay contrato realidad y que puede hacer el trabajador para reclamar sus prestaciones?",
+    "citas": [
+      {
+        "tema": "Consecuencias de la declaración del contrato de trabajo realidad",
+        "paginas": [
+          52,
+          53
+        ],
+        "topic_id": "LAB-0032"
+      },
+      {
+        "tema": "Herederos con derecho a reclamar salarios y prestaciones de trabajador fallecido",
+        "paginas": [
+          1132
+        ],
+        "topic_id": "LAB-1234"
+      },
+      {
+        "tema": "Pago de salarios y prestaciones sociales cuando fallece el trabajador",
+        "paginas": [
+          1132
+        ],
+        "topic_id": "LAB-1233"
+      },
+      {
+        "tema": "Entrega del cargo luego de terminado el contrato de trabajo",
+        "paginas": [
+          1093
+        ],
+        "topic_id": "LAB-1193"
+      },
+      {
+        "tema": "De la obligación de entrega del puesto de trabajo",
+        "paginas": [
+          1093
+        ],
+        "topic_id": "LAB-1192"
+      }
+    ],
+    "openrouter": {
+      "texto": "1. **Razonamiento breve**: La consulta se refiere a la figura del \"contrato realidad\", que se presenta cuando un trabajador que ha estado prestando servicios bajo un contrato civil o comercial, en realidad, tiene una relación laboral. Esto implica que el trabajador tiene derecho a reclamar prestaciones sociales y otros beneficios.\n\n2. **Respuesta directa**:\n   - **Definición de contrato realidad**: Se presenta cuando un trabajador demuestra que ha prestado servicios de manera personal y subordinada, lo que permite que se considere que existe un contrato de trabajo, a pesar de que formalmente se haya pactado otro tipo de contrato.\n   - **Derechos del trabajador**:\n     - Si se declara la existencia del contrato realidad, el trabajador tiene derecho a recibir todas las prestaciones sociales que le correspondan, como salarios, cesantías, primas, y aportes a seguridad social (Guía Laboral 2026, sección \"Consecuencias de la declaración del contrato de trabajo realidad\", páginas 52-53).\n     - El empleador debe realizar pagos retroactivos de las cotizaciones a pensión, ya que estas no prescriben (Guía Laboral 2026, sección \"Consecuencias de la declaración del contrato de trabajo realidad\", páginas 52-53).\n   - **Cómo reclamar**:\n     - El trabajador debe presentar una demanda ante la jurisdicción laboral, donde deberá demostrar la prestación personal del servicio y las condiciones de su trabajo.\n     - Es recomendable contar con pruebas documentales y testimoniales que respalden su reclamación.\n\n3. **Citas exactas**:\n   - \"Al declararse la existencia del contrato de trabajo realidad, para la ley significa que ese contrato de servicio fue en realidad un contrato de trabajo, por lo tanto, se le adeudan al trabajador todos los conceptos derivados de ese contrato como son prestaciones sociales...\" (Guía Laboral 2026, sección \"Consecuencias de la declaración del contrato de trabajo realidad\", páginas 52-53).\n\n4. **Advertencias**:\n   - Es fundamental contrastar esta información con el Código Sustantivo del Trabajo y la jurisprudencia aplicable para asegurar que se está actuando conforme a la ley.\n   - Si el trabajador no tiene claro cómo proceder, se sugiere consultar con un abogado especializado en derecho laboral para recibir asesoría adecuada sobre su caso específico.",
+      "tiempo": 5.847841262817383,
+      "tokens": 484
+    }
+  },
+  {
+    "perfil": "empresa",
+    "query": "¿Como puedo despedir un trabajador sin tener que pagar indemnizacion?",
+    "citas": [
+      {
+        "tema": "Indemnización por despedir al trabajador discapacitado sin autorización del inspector de trabajo",
+        "paginas": [
+          430
+        ],
+        "topic_id": "LAB-0478"
+      },
+      {
+        "tema": "Requisitos para despedir al trabajador sin justa causa",
+        "paginas": [
+          362
+        ],
+        "topic_id": "LAB-0409"
+      },
+      {
+        "tema": "Qué hacer si el empleador no paga lo adeudado al trabajador",
+        "paginas": [
+          1117
+        ],
+        "topic_id": "LAB-1217"
+      },
+      {
+        "tema": "Qué hacer cuando el trabajador no acepta el desmejoramiento",
+        "paginas": [
+          1155,
+          1156
+        ],
+        "topic_id": "LAB-1254"
+      },
+      {
+        "tema": "¿Si no despido al trabajador cuando se pensione, puedo despedirlo después?",
+        "paginas": [
+          151
+        ],
+        "topic_id": "LAB-0155"
+      }
+    ],
+    "openrouter": {
+      "texto": "1. **Razonamiento breve**: La consulta se centra en cómo despedir a un trabajador sin tener que pagar indemnización. Según la legislación laboral colombiana, el despido puede ser realizado sin justa causa, pero esto implica el pago de una indemnización. Sin embargo, existen ciertas causales que permiten el despido sin indemnización.\n\n2. **Respuesta directa**:\n   - **Causales de despido sin indemnización**:\n     - **Justa causa**: Si el despido se fundamenta en una justa causa legalmente comprobada, no se debe pagar indemnización.\n     - **Reconocimiento de pensión**: El reconocimiento de la pensión es una causa legal para despedir al trabajador sin que esto implique el pago de indemnización, incluso si no se hace de forma inmediata (Sección: ¿Si no despido al trabajador cuando se pensione, puedo despedirlo después?; páginas 151).\n   - **Requisitos**:\n     - Es fundamental que el despido esté debidamente justificado y que se respeten los derechos del trabajador, como el debido proceso (Sección: Indemnización por despedir al trabajador discapacitado sin autorización del inspector de trabajo; páginas 430).\n\n3. **Citas exactas**:\n   - \"El reconocimiento de la pensión es una justa causa para despedir al trabajador, pero si no se hace uso de esa causal de forma inmediata, no afecta la facultad que tiene el empleador para despedir al trabajador pensionado\" (Sección: ¿Si no despido al trabajador cuando se pensione, puedo despedirlo después?; página 151).\n   - \"La terminación del contrato de trabajo puede ser realizada en cualquier momento por parte de la empresa, y de no mediar una justa causa, se indemnizará al trabajador según la ley\" (Sección: Requisitos para despedir al trabajador sin justa causa; página 362).\n\n4. **Advertencias**:\n   - Es crucial verificar que la causa del despido sea realmente justa y esté documentada para evitar reclamaciones posteriores.\n   - Se recomienda contrastar esta información con el Código Sustantivo del Trabajo y otras normativas aplicables para asegurar el cumplimiento legal.",
+      "tiempo": 7.671320199966431,
+      "tokens": 457
+    }
+  },
+  {
+    "perfil": "trabajador",
+    "query": "¿Tengo derecho a prima de servicios si llevo solo 6 meses trabajando?",
+    "citas": [
+      {
+        "tema": "Valor de la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0766"
+      },
+      {
+        "tema": "Pagos que se incluyen en la base para liquidar la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0768"
+      },
+      {
+        "tema": "Salario base para el cálculo de la prima de servicios",
+        "paginas": [
+          681
+        ],
+        "topic_id": "LAB-0767"
+      },
+      {
+        "tema": "Cálculo de la prima de servicios",
+        "paginas": [
+          683
+        ],
+        "topic_id": "LAB-0771"
+      },
+      {
+        "tema": "Auxilio de transporte en el servicio doméstico",
+        "paginas": [
+          112
+        ],
+        "topic_id": "LAB-0108"
+      }
+    ],
+    "openrouter": {
+      "texto": "1. **Razonamiento breve**: La consulta se refiere al derecho a la prima de servicios, que es una prestación social a la que tienen derecho los trabajadores en Colombia, independientemente del tiempo trabajado, siempre que sea proporcional al tiempo laborado.\n\n2. **Respuesta directa**:\n   - Sí, tienes derecho a la prima de servicios si llevas solo 6 meses trabajando.\n   - La prima de servicios se calcula como un mes de salario por cada año trabajado, o proporcionalmente si el tiempo es menor a un año.\n   - En tu caso, si has trabajado 6 meses, tendrás derecho a la mitad de un mes de salario.\n\n3. **Citas exactas**:\n   - \"Por concepto de prima de servicios se debe pagar un mes de salario por cada año trabajado o proporcional si el tiempo trabajado es menor a un año. Así, si un trabajador ha trabajado sólo 6 meses, tendrá derecho a la mitad, esto es a $1.000.000\" (según la sección 'Valor de la prima de servicios' de la Guia Laboral 2026, páginas 681).\n   - \"La prima de servicios se debe pagar aun en los casos en que para la fecha de realizar el pago el trabajador lleve trabajando menos de seis meses\" (según la sección 'Cálculo de la prima de servicios' de la Guia Laboral 2026, páginas 683).\n\n4. **Advertencias**:\n   - Es importante verificar la normativa oficial y consultar el Código Sustantivo del Trabajo para tener una comprensión completa de tus derechos.\n   - Asegúrate de que tu empleador esté cumpliendo con esta obligación y, si no lo hace, considera presentar una reclamación formal.",
+      "tiempo": 5.5638267993927,
+      "tokens": 353
+    }
+  },
+  {
+    "perfil": "empresa",
+    "query": "¿Que descuentos puedo hacer legalmente al salario del trabajador?",
+    "citas": [
+      {
+        "tema": "La prohibición de hacer descuentos por daño y pérdida de herramientas",
+        "paginas": [
+          651
+        ],
+        "topic_id": "LAB-0725"
+      },
+      {
+        "tema": "Descuentos de salario por herramientas y errores del trabajador",
+        "paginas": [
+          651
+        ],
+        "topic_id": "LAB-0724"
+      },
+      {
+        "tema": "Descuentos por libranza en licencias no remuneradas",
+        "paginas": [
+          663
+        ],
+        "topic_id": "LAB-0742"
+      },
+      {
+        "tema": "Descuentos por libranzas en la licencia de maternidad",
+        "paginas": [
+          663
+        ],
+        "topic_id": "LAB-0741"
+      },
+      {
+        "tema": "Descuentos por libranza de la liquidación del trabajador",
+        "paginas": [
+          663,
+          664
+        ],
+        "topic_id": "LAB-0743"
+      }
+    ],
+    "openrouter": {
+      "texto": "1. **Razonamiento breve**: La consulta se centra en los descuentos que una empresa puede realizar legalmente sobre el salario de sus trabajadores. Es importante conocer las limitaciones y condiciones bajo las cuales se pueden hacer estos descuentos para cumplir con la normativa laboral.\n\n2. **Respuesta directa**:\n   - **Descuentos permitidos**:\n     - **Embargos**: La empresa debe cumplir con las órdenes de embargo hasta los límites permitidos por la ley (artículo 130 de la ley 1098 de 2016).\n     - **Libranzas**: Se pueden hacer descuentos por libranza sobre el salario que debe pagar al trabajador, siempre que exista un salario a descontar. Si el trabajador está en licencia no remunerada, no se puede hacer descuento alguno (sección \"Descuentos por libranza en licencias no remuneradas\", páginas 663).\n     - **Liquidación**: Al momento de la liquidación del trabajador, se puede descontar la libranza que le sea posible del valor de la liquidación, siempre que exista autorización expresa del trabajador (sección \"Descuentos por libranza de la liquidación del trabajador\", páginas 663-664).\n\n   - **Descuentos prohibidos**:\n     - **Por daños o pérdidas**: No se pueden hacer descuentos por la pérdida o daño de herramientas, errores o pérdidas causadas por el trabajador (artículo 59 del Código Sustantivo del Trabajo) (sección \"Descuentos de salario por herramientas y errores del trabajador\", páginas 651).\n\n3. **Citas exactas**:\n   - \"El incumplimiento de la orden anterior, hace al empleador o al pagador en su caso, responsable solidario de las cantidades no descontadas.\" (sección \"Descuentos de salario por herramientas y errores del trabajador\", páginas 651).\n   - \"En una licencia no remunerada el trabajador no recibe salario, y por tanto es físicamente imposible que la empresa puede descontar la libranza sobre un pago inexistente.\" (sección \"Descuentos por libranza en licencias no remuneradas\", páginas 663).\n   - \"Cuando el trabajador se retira de la empresa y aún debe parte del crédito, la empresa o empleador puede descontar la libranza que le sea posible del valor de la liquidación del trabajador.\" (sección \"Descuentos por libranza de la liquidación del trabajador\", páginas 663-664).\n\n4. **Advertencias**:\n   - Es fundamental verificar la normativa oficial (CST, leyes, jurisprudencia) para asegurarse de que se están cumpliendo todas las disposiciones legales.\n   - Si hay situaciones específicas o casos particulares, se recomienda consultar con un abogado especializado en derecho laboral para obtener asesoría adecuada.",
+      "tiempo": 7.386049270629883,
+      "tokens": 570
+    }
+  }
+]
