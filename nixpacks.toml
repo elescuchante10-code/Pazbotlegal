@@ -1,14 +1,7 @@
 # Configuracion de build para Railway
+# NO sobrescribimos la fase install: nixpacks crea el venv e instala requirements.txt automaticamente.
 [phases.setup]
 nixPkgs = ["python3", "gcc", "stdenv.cc.cc.lib"]
-
-[phases.install]
-# Instalar torch CPU-only primero (evita descargar CUDA ~2.5GB),
-# luego el resto de dependencias. nixpacks crea el venv en /opt/venv.
-cmds = [
-  "/opt/venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
-  "/opt/venv/bin/python -m pip install -r requirements.txt"
-]
 
 [variables]
 CUDA_VISIBLE_DEVICES = "-1"
