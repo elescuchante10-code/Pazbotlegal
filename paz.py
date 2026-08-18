@@ -56,7 +56,9 @@ def llamar_deepseek(api_key, modelo, system_prompt, user_prompt, temperatura=TEM
             {"role": "user", "content": user_prompt},
         ],
         "temperature": temperatura,
-        "max_tokens": 8192,  # espacio amplio para razonamiento + respuesta final
+        "max_tokens": 32768,  # deepseek-v4-flash soporta hasta 384000; 8192 se quedaba
+                               # corto en conversaciones largas (razonamiento + respuesta
+                               # competian por el mismo cupo y la respuesta salia vacia)
     }
     t0 = time.time()
     r = requests.post(DEEPSEEK_URL, headers=headers, json=payload, timeout=180)
