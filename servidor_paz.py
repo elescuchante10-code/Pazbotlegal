@@ -129,6 +129,10 @@ def panel_captura():
 
 @app.route("/health")
 def health():
+    print(f"[debug-ip] remote_addr={request.remote_addr} XFF={request.headers.get('X-Forwarded-For')} "
+          f"CF-Connecting-IP={request.headers.get('CF-Connecting-IP')} "
+          f"True-Client-IP={request.headers.get('True-Client-IP')} "
+          f"X-Real-IP={request.headers.get('X-Real-IP')}", flush=True)
     return jsonify({"status": "ok", "memoria": agente.memoria is not None})
 
 if __name__ == "__main__":
