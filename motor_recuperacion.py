@@ -147,12 +147,17 @@ class RecuperadorHibrido:
             scores = model.predict(pares)
             # Boost a fuente primaria (Ley 2466): la norma oficial debe competir
             # de igual a igual con la guia explicativa, que suele dominar el reranker.
+            # Solo se aplica a chunks que el cross-encoder ya ubico en la mitad
+            # superior de relevancia: evita rescatar articulos de ley poco
+            # relacionados con la consulta (ej.: citar el articulo de jornada
+            # maxima en una pregunta sobre vacaciones).
             if scores.size:
                 smin, smax = float(scores.min()), float(scores.max())
                 rango = (smax - smin) or 1.0
+                piso_relevancia = smin + 0.5 * rango
                 for j, cid in enumerate(top_cids):
                     doc = self.childs[self.cid_index[cid]].get("documento", "")
-                    if "Ley" in doc:
+                    if "Ley" in doc and scores[j] >= piso_relevancia:
                         scores[j] += 0.35 * rango  # boost ~35% del rango
             orden = np.argsort(-scores)
             top_cids = [top_cids[i] for i in orden[:top_k]]

@@ -13,11 +13,15 @@ if _DATA_DIR:
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 from flask import Flask, request, jsonify, send_from_directory
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from paz import PAZProduccion
 import captura_pruebas as captura
 
 app = Flask(__name__, static_folder=str(pathlib.Path(__file__).parent / "ui"), static_url_path="")
 BASE_DIR = pathlib.Path(__file__).parent
+
+limiter = Limiter(get_remote_address, app=app, default_limits=["200 per hour"])
 
 # Instancia unica del agente (se carga al arrancar el servidor)
 print("=== Iniciando servidor PAZ/Alejandra ===", flush=True)
@@ -32,6 +36,7 @@ def index():
     return send_from_directory(str(BASE_DIR / "ui"), "index.html")
 
 @app.route("/chat", methods=["POST"])
+@limiter.limit("15 per minute; 100 per hour")
 def chat():
     data = request.get_json(force=True)
     query = (data.get("query") or "").strip()
@@ -89,6 +94,7 @@ def chat():
     })
 
 @app.route("/feedback", methods=["POST"])
+@limiter.limit("30 per minute")
 def feedback():
     """Registra feedback del usuario (positivo/negativo) sobre una consulta."""
     data = request.get_json(force=True)
@@ -103,6 +109,7 @@ def feedback():
 CAPTURA_TOKEN = os.environ.get("CAPTURA_TOKEN", "")
 
 @app.route("/captura", methods=["GET"])
+@limiter.limit("10 per minute")
 def panel_captura():
     """Panel de captura (uso interno): resumen + consultas recientes.
     Contiene conversaciones reales de usuarios; requiere token de administrador."""

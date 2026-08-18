@@ -1,1 +1,1 @@
-web: python servidor_paz.py
+web: gunicorn -w 1 --threads 4 --timeout 180 -b 0.0.0.0:$PORT servidor_paz:app
