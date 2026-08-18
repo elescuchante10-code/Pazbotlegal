@@ -13,21 +13,25 @@ if _DATA_DIR:
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 from flask import Flask, request, jsonify, send_from_directory
-from werkzeug.middleware.proxy_fix import ProxyFix
 from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
 from paz import PAZProduccion
 import captura_pruebas as captura
 
 app = Flask(__name__, static_folder=str(pathlib.Path(__file__).parent / "ui"), static_url_path="")
 BASE_DIR = pathlib.Path(__file__).parent
 
-# Railway pone un proxy delante: sin esto, request.remote_addr muestra una IP
-# interna distinta en cada request (rango 100.64.x.x) y el rate limiting por
-# IP no sirve de nada. ProxyFix toma la IP real del cliente de X-Forwarded-For.
-app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
+def ip_cliente():
+    """IP real del cliente para el rate limiting. Railway antepone su propio
+    proxy: X-Forwarded-For llega como 'cliente_real, ip_borde_railway', asi
+    que el primer valor es el cliente. Sin esto, remote_addr es la IP interna
+    del proxy de Railway (misma o rotante) y el rate limiting no distingue
+    clientes."""
+    xff = request.headers.get("X-Forwarded-For", "")
+    if xff:
+        return xff.split(",")[0].strip()
+    return request.remote_addr or "desconocido"
 
-limiter = Limiter(get_remote_address, app=app, default_limits=["200 per hour"])
+limiter = Limiter(ip_cliente, app=app, default_limits=["200 per hour"])
 
 # Instancia unica del agente (se carga al arrancar el servidor)
 print("=== Iniciando servidor PAZ/Alejandra ===", flush=True)
@@ -129,7 +133,6 @@ def panel_captura():
 
 @app.route("/health")
 def health():
-    print(f"[debug-ip] remote_addr={request.remote_addr} headers={dict(request.headers)}", flush=True)
     return jsonify({"status": "ok", "memoria": agente.memoria is not None})
 
 if __name__ == "__main__":
